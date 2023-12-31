@@ -1,18 +1,18 @@
 public class Propietario {
-    static int id_propietario = 0;
-    double cuota_recibo;
-    String nombre;
-    String numero_departamento;
-    String dni;
 
-    String phonenumber;
-    String mail;
+    /* private es el proceso de encapsulamiento */
+    private static int id_propietario = 0;
+    private String dni;
+    private double cuota_recibo;
+    private String nombre;
+    private String numero_departamento;
+    private String phonenumber;
+    private String mail;
 
     public Propietario (String nombre, String numero_departamento){
         id_propietario++;
         this.nombre = nombre;
         this.numero_departamento = numero_departamento;
-
     }
 
     public void mostrarNombre(){
@@ -24,7 +24,13 @@ public class Propietario {
     }
 
     public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+        if(phonenumber.length()<10){
+            this.phonenumber = phonenumber;
+        }
+        else {
+            System.out.println("Corrige tu número de celular insertado");
+        }
+
     }
 
     public String getMail() {
@@ -64,11 +70,17 @@ public class Propietario {
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+
+        if(dni.length()<9){
+            this.dni = dni;
+        }
+        else {
+            System.out.println("Corrige tu valor insertado en tu DNI");
+        }
     }
 
-    public double getCuota_recibo() {
-        return cuota_recibo;
+    public String getCuota_recibo() {
+        return "S/ " + this.cuota_recibo ;
     }
 
     public void setCuota_recibo(double cuota_recibo) {
