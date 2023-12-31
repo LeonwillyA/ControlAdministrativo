@@ -1,9 +1,39 @@
 public class Propietario {
-    int id_propietario;
+    static int id_propietario = 0;
+    double cuota_recibo;
     String nombre;
     String numero_departamento;
     String dni;
-    double cuota_recibo;
+
+    String phonenumber;
+    String mail;
+
+    public Propietario (String nombre, String numero_departamento){
+        id_propietario++;
+        this.nombre = nombre;
+        this.numero_departamento = numero_departamento;
+
+    }
+
+    public void mostrarNombre(){
+        System.out.println(nombre);
+    }
+
+    public String getPhonenumber() {
+        return phonenumber;
+    }
+
+    public void setPhonenumber(String phonenumber) {
+        this.phonenumber = phonenumber;
+    }
+
+    public String getMail() {
+        return mail;
+    }
+
+    public void setMail(String mail) {
+        this.mail = mail;
+    }
 
     public int getId_propietario() {
         return id_propietario;
