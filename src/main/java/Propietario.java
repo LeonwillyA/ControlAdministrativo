@@ -23,4 +23,10 @@ public class Propietario extends Humano{
     public void setNumero_departamento(String numero_departamento) {
         this.numero_departamento = numero_departamento;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\n Recibo de la administración: " + cuota_recibo
+                + "\n Numero de departamento: " + numero_departamento;
+    }
 }

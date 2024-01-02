@@ -1,17 +1,20 @@
 public class Inicio {
     public static void main(String[] args) {
-    Propietario myPropietario = new Propietario("Willy", "León Lucano","1812");
+    Propietario myPropietario = new Propietario("Willy", "León Lucano","wll@mail.com");
 
-    Propietario myPropietarioA = new Propietario("Gian Franco", "Chirinos Carrasco", "109");
+    Propietario myPropietarioA = new Propietario("Gian Franco", "Chirinos Carrasco", "gfchc@mail.com");
 
     myPropietario.setCuota_recibo( 122.4);
-        System.out.println(myPropietario.getNombres());
+    myPropietario.setNumero_departamento("1812");
+            System.out.println(myPropietario);
+
         System.out.println(myPropietario.getCuota_recibo());
 
         myPropietario.setPhonenumber("999123565");
         System.out.println(myPropietario.getPhonenumber());
         myPropietario.setDni("45454545");
         System.out.println(myPropietario.getDni());
+
 
 
 
