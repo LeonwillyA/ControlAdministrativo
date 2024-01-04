@@ -1,3 +1,5 @@
+package modelos;
+
 public class Humano {
     private int id;
     private String nombres;
@@ -62,7 +64,7 @@ public class Humano {
 
     @Override
     public String toString() {
-        return "Nombre: " + nombres + " Apellido: " + apellidos
-                + " Correo: " + mail;
+        return "Nombre: " + nombres + " //Apellido: " + apellidos
+                + "\n //Correo: " + mail;
     }
 }

@@ -1,3 +1,5 @@
+package modelos;
+
 public class Propietario extends Humano{
 
     /* private es el proceso de encapsulamiento */

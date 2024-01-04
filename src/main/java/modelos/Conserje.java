@@ -1,9 +1,11 @@
+package modelos;
+
 public class Conserje extends Humano{
     private String tareas_limpieza;
     private String tareas_jardineria;
     private String tareas_pintado;
 
-    Conserje (String nombres, String apellidos, String mail){
+    public Conserje (String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }
 

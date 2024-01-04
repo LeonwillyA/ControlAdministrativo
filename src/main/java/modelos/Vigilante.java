@@ -1,9 +1,11 @@
+package modelos;
+
 public class Vigilante extends Humano{
     private String ocurrencias;
     private String registro_visitas;
     private String registro_paqueteria;
 
-    Vigilante (String nombres, String apellidos, String mail){
+    public Vigilante (String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }
 
