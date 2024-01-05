@@ -1,6 +1,6 @@
 package modelos;
 
-public class Humano {
+public abstract class Humano {
     private int id;
     private String nombres;
     private String apellidos;
