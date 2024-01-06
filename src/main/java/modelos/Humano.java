@@ -67,4 +67,7 @@ public abstract class Humano {
         return "Nombre: " + nombres + " //Apellido: " + apellidos
                 + "\n //Correo: " + mail;
     }
+
+    public abstract void informacionUsuarios();
+
 }
