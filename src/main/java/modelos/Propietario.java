@@ -31,4 +31,10 @@ public class Propietario extends Humano{
         return super.toString() + "\n Recibo de la administración: " + cuota_recibo
                 + "\n Numero de departamento: " + numero_departamento;
     }
+
+    @Override
+    public void informacionUsuarios() {
+        System.out.println("Residente del Condominio Terrezas del Sol");
+        System.out.println("Piso en el que esta viviendo");
+    }
 }

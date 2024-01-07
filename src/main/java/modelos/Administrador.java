@@ -26,6 +26,13 @@ public class Administrador extends Humano{
         return super.toString() + "\n Tareas del vigilante: " + designarTareasVigilante + "\n Distribución de tareas del personal de conserjeria: " + tareasConserjes;
     }
 
+    @Override
+    public void informacionUsuarios() {
+        System.out.println("Administrador");
+        System.out.println("Genera recibos");
+        System.out.println("Designan funciones");
+    }
+
     public static class TareasConserje {
         private int id;
         private String hora;

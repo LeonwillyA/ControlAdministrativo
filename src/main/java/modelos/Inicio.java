@@ -16,11 +16,14 @@ public class Inicio {
         myPropietario.setDni("45454545");
         System.out.println(myPropietario.getDni());*/
 
-    Administrador myAdministrador = new Administrador("Ricardo Angel", "Guerrero Solis", "rags@mail.com");
+    /*Administrador myAdministrador = new Administrador("Ricardo Angel", "Guerrero Solis", "rags@mail.com");
 
         myAdministrador.addTareasConserje("07:00 hrs", new Date(), "Limpieza del hall del edificio N° 1");
         myAdministrador.addTareasConserje("09:00 hrs",new Date() , "Limpieza de los 3 ascensores");
-        System.out.println(myAdministrador);
+        System.out.println(myAdministrador);*/
+
+        Humano humano = new Administrador(  "Riki", "Rikon", "tt@gmail.com");z|
+        humano.informacionUsuarios();
 
 
         /*for (modelos.Administrador.TareasConserje ss: myAdministrador.getTareasConserjes()){

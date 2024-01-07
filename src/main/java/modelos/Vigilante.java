@@ -9,6 +9,11 @@ public class Vigilante extends Humano{
         super(nombres,apellidos, mail);
     }
 
+    @Override
+    public void informacionUsuarios() {
+        System.out.println("Ejecuta las funciones de vigilancia");
+    }
+
     public String getOcurrencias() {
         return ocurrencias;
     }

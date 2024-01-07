@@ -9,6 +9,11 @@ public class Conserje extends Humano{
         super(nombres,apellidos, mail);
     }
 
+    @Override
+    public void informacionUsuarios() {
+        System.out.println("Ejectuta las funciones de limpieza");
+    }
+
     public String getTareas_limpieza() {
         return tareas_limpieza;
     }
