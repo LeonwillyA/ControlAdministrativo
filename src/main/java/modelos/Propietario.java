@@ -1,12 +1,11 @@
 package modelos;
 
 public class Propietario extends Humano{
-
-    /* private es el proceso de encapsulamiento */
+    //Private pare encapsulamiento
     private double cuota_recibo;
     private String numero_departamento;
 
-    Propietario(String nombres, String apellidos, String mail){
+    public Propietario(String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }
 

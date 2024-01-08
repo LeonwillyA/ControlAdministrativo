@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d0cfd967-df03-4aad-8527-050ff8eaa3a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Administrador.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Conserje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Conserje.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Inicio.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Propietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Propietario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Vigilante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Vigilante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +57,7 @@
   </component>
   <component name="RunManager" selected="Application.Inicio">
     <configuration name="Inicio" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="modelos.Inicio" />
+      <option name="MAIN_CLASS_NAME" value="Inicio" />
       <module name="AdministracionCondominioTerrazas" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -104,6 +101,17 @@
     </task>
     <servers />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -113,13 +121,18 @@
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/modelos/Inicio.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/Inicio.java</url>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/modelos/Inicio.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/Inicio.java</url>
           <line>2</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Inicio.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -1,4 +1,6 @@
-package modelos;
+import modelos.Administrador;
+import modelos.Humano;
+import modelos.Propietario;
 
 import java.util.Date;
 
@@ -22,8 +24,28 @@ public class Inicio {
         myAdministrador.addTareasConserje("09:00 hrs",new Date() , "Limpieza de los 3 ascensores");
         System.out.println(myAdministrador);*/
 
-        Humano humano = new Administrador(  "Riki", "Rikon", "tt@gmail.com");z|
+        Humano humano = new Administrador(  "Riki", "Rikon", "tt@gmail.com");
         humano.informacionUsuarios();
+
+        Humano humanito = new Propietario("Paco cantinflas", "Ochoa Bellido", "pcob@gmail.com");
+        humanito.informacionUsuarios();
+
+        Humano humanit1 = new Humano("alonso","parraga","apg@mail.com") {
+            @Override
+            public void informacionUsuarios() {
+                System.out.println("Usuario del backend del sistema");
+            }
+        };
+
+        humanit1.informacionUsuarios();
+
+        Humano humane = new Humano("Joaco","Ochoa","smm@mail.com") {
+            @Override
+            public void informacionUsuarios() {
+                System.out.println("Usuario del frontend del sistema");
+            }
+        };
+        humane.informacionUsuarios();
 
 
         /*for (modelos.Administrador.TareasConserje ss: myAdministrador.getTareasConserjes()){
