@@ -1,6 +1,4 @@
-import modelos.Administrador;
-import modelos.Humano;
-import modelos.Propietario;
+import modelos.*;
 
 import java.util.Date;
 
@@ -46,6 +44,21 @@ public class Inicio {
             }
         };
         humane.informacionUsuarios();
+
+
+        ICronograma iCronograma = new ICronograma() {
+            @Override
+            public void Cronograma(Date date, String time, String task) {
+                System.out.println("En proceso de construccion del sistema de control");
+            }
+        };
+
+        iCronograma.Cronograma(new Date(),"11:00 horas", "Descanso");
+
+        ICronograma iCronograma1 = new TareasConserje();
+        iCronograma1.Cronograma(new Date(),"11:00 horas", "Descanso");
+
+
 
 
         /*for (modelos.Administrador.TareasConserje ss: myAdministrador.getTareasConserjes()){
