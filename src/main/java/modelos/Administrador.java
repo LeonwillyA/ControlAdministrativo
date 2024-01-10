@@ -6,6 +6,20 @@ import java.util.Date;
 public class Administrador extends Humano{
 
     private String designarTareasVigilante;
+    private double cuotaTotal;
+
+     public class CuotasPropocionales {
+        private double areaAdqui;
+        double areaTotal = 1000;
+        double cuotaRecibo;
+         if (areaAdqui=66) {
+             cuotaRecibo = cuotaTotal*areaAdqui/areaTotal;
+         }else if (areaAdqui=54) {
+             cuotaRecibo = cuotaTotal*areaAdqui/areaTotal;
+         }else {
+             System.out.println("Esta mal registrado el porcentaje");
+         }
+     }
 
     public Administrador(String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
