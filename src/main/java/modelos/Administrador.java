@@ -6,23 +6,31 @@ import java.util.Date;
 public class Administrador extends Humano{
 
     private String designarTareasVigilante;
-    private double cuotaTotal;
 
-     public class CuotasPropocionales {
-        private double areaAdqui;
-        double areaTotal = 1000;
-        double cuotaRecibo;
-         if (areaAdqui=66) {
-             cuotaRecibo = cuotaTotal*areaAdqui/areaTotal;
-         }else if (areaAdqui=54) {
-             cuotaRecibo = cuotaTotal*areaAdqui/areaTotal;
-         }else {
-             System.out.println("Esta mal registrado el porcentaje");
-         }
-     }
+    private double metrajeTotal;
+    private double gastosTotales;
+
+    public double getMetrajeTotal() {
+        return metrajeTotal = 12355;
+    }
+
+    public void setMetrajeTotal(double metrajeTotal) {
+        this.metrajeTotal = metrajeTotal;
+    }
+
+    public double getGastosTotales() {
+        return gastosTotales;
+    }
+
+    public void setGastosTotales(double gastosTotales) {
+        this.gastosTotales = gastosTotales;
+    }
 
     public Administrador(String nombres, String apellidos, String mail){
+
         super(nombres,apellidos, mail);
+
+
     }
 
     ArrayList<TareasConserje> tareasConserjes = new ArrayList<>();

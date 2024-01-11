@@ -4,6 +4,16 @@ public class Propietario extends Humano{
     //Private pare encapsulamiento
     private double cuota_recibo;
     private String numero_departamento;
+    private double metraje;
+
+
+    public double getMetraje() {
+        return metraje;
+    }
+
+    public void setMetraje(double metraje) {
+        this.metraje = metraje;
+    }
 
     public Propietario(String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
