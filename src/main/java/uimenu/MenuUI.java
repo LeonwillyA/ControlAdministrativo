@@ -1,5 +1,8 @@
 package uimenu;
 
+import modelos.Propietario;
+
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuUI {
@@ -19,7 +22,10 @@ public class MenuUI {
 
             switch (response){
                 case 1:
-                System.out.println("Bienvenido doctor");
+                    System.out.println("Bienvenido propietario");
+                    response = 0;
+                    mostrarPropietarioMenu();
+
                 break;
                 case 2:
                     System.out.println("Bienvenido Conserje");
@@ -33,7 +39,21 @@ public class MenuUI {
                 case 0:
                     System.out.println("Gracias por visitarnos");
                     break;
+
+                default:
+                    System.out.println("Elige una opción correcta");
             }
-        }
+        }while (response !=0 );
     }
+    private static void autenticarHumano (int humanType){
+        // humanType = 1 Propietario
+        // humanType = 2 Conserje
+        // humanType = 3 Vigilante
+        // humanType = 4 Administrador
+        // Vamos hacer una lista en un array como prueba, para posteriormente utilizar una base de datos
+        ArrayList<Propietario> propietarios = new ArrayList<>();
+        propietarios.add(new Propietario("","",""));
+    }
+
+    static void mostrarPropietarioMenu(){}
 }
