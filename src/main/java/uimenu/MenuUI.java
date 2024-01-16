@@ -15,7 +15,7 @@ public class MenuUI {
     public static  Propietario propietarioLogeado;
 
 
-    public static mostrarMenu(){
+    public static void mostrarMenu(){
         System.out.println("Administración de Actividades");
         System.out.println("Seleccione el tipo de usuario al cual perteneces: ");
 
@@ -86,9 +86,9 @@ public class MenuUI {
             if (humanType == 2){
                 for (Conserje c:conserjes ){
                     if (c.getMail().equals(email)){
-                    emailCorrect = true;
-                    conserjeLogeado = c;
-                    mostrarConserjeMenu();
+                        emailCorrect = true;
+                        conserjeLogeado = c;
+                        mostrarConserjeMenu();
                     //Indicar la conformidad de que se ha logeado
                 }}
             }
