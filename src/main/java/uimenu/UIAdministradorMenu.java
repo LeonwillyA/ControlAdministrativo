@@ -34,4 +34,17 @@ public class UIAdministradorMenu {
         }while (response != 0);
 
     }
+    private static void mostrarTareasConserje(){
+        int response = 0;
+        do {
+            System.out.println(" :: Agregar la tarea");
+            System.out.println("Selecciona el mes");
+
+            for (int i = 0; i < 3; i++) {
+                int j = i + 1;
+                System.out.println(j+". "+MenuUI.MONTHS[i]);
+            }
+
+        }while (response != 0);
+    }
 }

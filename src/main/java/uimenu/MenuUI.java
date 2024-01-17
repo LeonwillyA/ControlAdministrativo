@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuUI {
+    public static final String [] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
     public static Administrador administradorLogeado;
     public static Conserje conserjeLogeado;
     public static Vigilante vigilanteLogeado;
