@@ -44,6 +44,21 @@ public class UIAdministradorMenu {
                 int j = i + 1;
                 System.out.println(j+". "+MenuUI.MONTHS[i]);
             }
+            System.out.println("0. Return");
+
+            Scanner sc = new Scanner(System.in);
+            response = Integer.valueOf(sc.nextLine());
+
+            if (response>0 && response<4){
+                int mesSeleccionado = response;
+                System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado]);
+                System.out.println("Inserta la fecha: dd/mm/yy");
+                String date = sc.nextLine();
+
+            } else if (response == 0) {
+                mostrarMenuAdministrador();
+            }
+
 
         }while (response != 0);
     }
