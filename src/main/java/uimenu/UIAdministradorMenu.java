@@ -55,6 +55,19 @@ public class UIAdministradorMenu {
                 System.out.println("Inserta la fecha: dd/mm/yy");
                 String date = sc.nextLine();
 
+                System.out.println("Confirmar si la fecha es la correcta: " + date + "\n1. Fecha correcta \n2. Cambiar la fecha");
+                int responseDate = Integer.valueOf(sc.nextLine());
+                if( responseDate == 2) continue;
+
+                int responseTime = 0;
+                String time = "";
+                do {
+                    System.out.println("Insertar la hora de inicio de la actividad del día " + date + "[00:00]");
+                    time = sc.nextLine();
+                    System.out.println("Confirmar si la hora es la correcta: " + time + "\n1. Hora correcta \n2. Cambiar la hora");
+                    responseTime = Integer.valueOf(sc.nextLine());
+                }while (responseTime == 2);
+
             } else if (response == 0) {
                 mostrarMenuAdministrador();
             }
