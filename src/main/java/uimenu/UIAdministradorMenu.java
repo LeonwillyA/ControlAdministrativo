@@ -68,6 +68,17 @@ public class UIAdministradorMenu {
                     responseTime = Integer.valueOf(sc.nextLine());
                 }while (responseTime == 2);
 
+                int responseTask = 0;
+                String task = "";
+                do {
+                    System.out.println("Insertar el trabajo que realizara " + task );
+                    task = sc.nextLine();
+                    System.out.println("Confirmar si el trabajo que va ha realizar ha de ser la correcta: " + task + "\n1. Tarea correcta \n2. Cambiar la tarea");
+                    responseTask = Integer.valueOf(sc.nextLine());
+                }while (responseTask == 2);
+
+                MenuUI.administradorLogeado.addTareasConserje(time,date,task);
+
             } else if (response == 0) {
                 mostrarMenuAdministrador();
             }

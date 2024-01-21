@@ -1,5 +1,7 @@
 package modelos;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -35,7 +37,8 @@ public class Administrador extends Humano{
 
     ArrayList<TareasConserje> tareasConserjes = new ArrayList<>();
 
-       public void addTareasConserje (String hora, Date dia, String task){
+       public void addTareasConserje (String hora, String dia, String task){
+
             tareasConserjes.add(new Administrador.TareasConserje(hora, dia, task));
        }
 
@@ -60,10 +63,15 @@ public class Administrador extends Humano{
         private String hora;
         private Date dia;
         private String task;
+        SimpleDateFormat format = new SimpleDateFormat("dd/mm/yyyy");
 
-        public TareasConserje(String hora, Date dia, String task){
+        public TareasConserje(String hora, String dia, String task){
             this.hora = hora;
-            this.dia = dia;
+            try {
+                this.dia = format.parse(dia);
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
             this.task = task;
 
         }
@@ -86,6 +94,12 @@ public class Administrador extends Humano{
 
         public Date getDia() {
             return dia;
+        }
+
+        public String getDia(String DATE) {
+            //Me va servir como bandera
+
+            return format.format(dia);
         }
 
         public void setDia(Date dia) {
