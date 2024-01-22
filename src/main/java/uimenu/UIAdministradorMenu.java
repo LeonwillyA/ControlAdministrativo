@@ -1,8 +1,14 @@
 package uimenu;
 
+import modelos.Administrador;
+
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIAdministradorMenu {
+
+    public static ArrayList<Administrador> administradorsTareasMostradas = new ArrayList<>();
 
     public static void mostrarMenuAdministrador(){
         int response = 0;
@@ -85,5 +91,12 @@ public class UIAdministradorMenu {
 
 
         }while (response != 0);
+    }
+
+    private static void revisarAdminitradorTareasConserjes(Administrador administrador){
+        if (administrador.getTareasConserjes().size()>0
+        && !administradorsTareasMostradas.contains(administrador)){
+        administradorsTareasMostradas.add(administrador);
+        }
     }
 }
