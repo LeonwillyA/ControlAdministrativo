@@ -1,10 +1,15 @@
 import modelos.*;
-
+import uimenu.MenuUI;
 import java.util.Date;
+
+import static uimenu.MenuUI.mostrarMenu;
 
 public class Inicio {
     public static void main(String[] args) {
-    modelos.Propietario myPropietario = new modelos.Propietario("Willy", "León Lucano","wll@mail.com");
+        mostrarMenu();
+
+
+        /*modelos.Propietario myPropietario = new modelos.Propietario("Willy", "León Lucano","wll@mail.com");
 
     modelos.Propietario myPropietarioA = new modelos.Propietario("Gian Franco", "Chirinos Carrasco", "gfchc@mail.com");
         myPropietario.setCuota_recibo( 122.4);
@@ -21,11 +26,11 @@ public class Inicio {
 
         System.out.println("El administrador tiene conocimiento que el metraje total de la suma de todos los departamentos y estacionamiento es el siguiente: " + myAdministrador.getMetrajeTotal());
 
-        myAdministrador.addTareasConserje("07:00 hrs", new Date(), "Limpieza del hall del edificio N° 1");
+        /*myAdministrador.addTareasConserje("07:00 hrs", new Date(), "Limpieza del hall del edificio N° 1");
         myAdministrador.addTareasConserje("09:00 hrs",new Date() , "Limpieza de los 3 ascensores");
-        System.out.println(myAdministrador);
+        System.out.println(myAdministrador);*/
 
-     myPropietario.setMetraje(42);
+     /*myPropietario.setMetraje(42);
         System.out.println(myPropietario.getMetraje());
         System.out.println("La fracción total del pago que se desea realizar para dicho propietario es el siguiente: " + (myPropietario.getMetraje()/ myAdministrador.getMetrajeTotal()));
         myAdministrador.setGastosTotales(32300.55);
@@ -39,7 +44,7 @@ public class Inicio {
             System.out.println("Esto es tremendo");
         } else {
             System.out.println("Esto es una porqueria");
-        }
+        }*/
 
         /*Humano humano = new Administrador(  "Riki", "Rikon", "tt@gmail.com");
         humano.informacionUsuarios();

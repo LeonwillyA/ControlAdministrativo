@@ -28,6 +28,7 @@ public class UIAdministradorMenu {
 
             switch (response){
                 case 1:
+                    mostrarTareasConserje();
                     break;
                 case 2:
                     break;
@@ -57,7 +58,7 @@ public class UIAdministradorMenu {
 
             if (response>0 && response<4){
                 int mesSeleccionado = response;
-                System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado]);
+                System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado-1]);
                 System.out.println("Inserta la fecha: dd/mm/yy");
                 String date = sc.nextLine();
 
@@ -83,7 +84,9 @@ public class UIAdministradorMenu {
                     responseTask = Integer.valueOf(sc.nextLine());
                 }while (responseTask == 2);
 
+
                 MenuUI.administradorLogeado.addTareasConserje(time,date,task);
+                revisarAdminitradorTareasConserjes(MenuUI.administradorLogeado);
 
             } else if (response == 0) {
                 mostrarMenuAdministrador();

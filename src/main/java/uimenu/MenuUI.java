@@ -28,7 +28,8 @@ public class MenuUI {
             System.out.println("4. Administrador");
             System.out.println("0. Salir");
 
-            Scanner ac = new Scanner(System.in);
+            Scanner sc = new Scanner(System.in);
+            response = Integer.valueOf(sc.nextLine());
 
             switch (response){
                 case 1:
@@ -81,35 +82,28 @@ public class MenuUI {
             System.out.println("Inserta tu correo electronico: ");
             Scanner sc = new Scanner(System.in);
             String email = sc.nextLine();
-            if (humanType == 1){
-                for (){if ()}
-            }
+
             if (humanType == 2){
                 for (Conserje c:conserjes ){
                     if (c.getMail().equals(email)){
                         emailCorrect = true;
                         conserjeLogeado = c;
-                        mostrarConserjeMenu();
+
                     //Indicar la conformidad de que se ha logeado
                 }}
             }
-            if (humanType == 3){
-                for (){if ()}
-            }
+
             if (humanType == 4){
                 for (Administrador a: administradors){
                     if (a.getMail().equals(email)){
                         emailCorrect = true;
                         administradorLogeado = a;
-                        mostrarAdministradorMenu();
+                        UIAdministradorMenu.mostrarMenuAdministrador();
+
                     }}}
-        }while (emailCorrect=true){}
+        }while (emailCorrect=true);{}
 
     }
 
-    static void mostrarPropietarioMenu(){}
-    static void mostrarConserjeMenu(){}
-    static void mostrarVigilanteMenu(){}
-    static void mostrarAdministradorMenu(){}
 
 }
