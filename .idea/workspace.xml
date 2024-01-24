@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Inicio.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Inicio.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/uimenu/MenuUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uimenu/MenuUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/uimenu/UIAdministradorMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/uimenu/UIAdministradorMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,20 +119,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/example/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Inicio.java</url>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/Inicio.java</url>
-          <line>6</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/uimenu/MenuUI.java</url>
-          <line>33</line>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -68,14 +68,15 @@ public class MenuUI {
         // humanType = 4 Administrador
         // Vamos hacer una lista en un array como prueba, para posteriormente utilizar una base de datos
         ArrayList<Conserje> conserjes  = new ArrayList<>();
-        System.out.println(new Conserje("Jose","Rivadeneyra","jri@mail"));
-        System.out.println(new Conserje("Jaime","Canchari","jca@mail.com"));
-        System.out.println(new Conserje("Carlos","Padilla","cpa@mail.com"));
+        conserjes.add(new Conserje("Jose","Rivadeneyra","jri@mail"));
+        conserjes.add(new Conserje("Jaime","Canchari","jca@mail.com"));
+        conserjes.add(new Conserje("Carlos","Padilla","cpa@mail.com"));
+
         //Es como si fuera a mi capa de persistencia de datos y me trajera todos los usuarios que tengo
         // registrado, dependiento del tipo de usuario que sea.
         ArrayList<Administrador> administradors = new ArrayList<>();
-        System.out.println(new Administrador("Carlos","Urriate","curr@mail.com"));
-        System.out.println(new Administrador("Willy","Leóni","wle@mail.com"));
+        administradors.add(new Administrador("Carlos","Urriate","curr@mail.com"));
+        administradors.add(new Administrador("Willy","Leóni","wle@mail.com"));
 
         boolean emailCorrect = false;
         do {
