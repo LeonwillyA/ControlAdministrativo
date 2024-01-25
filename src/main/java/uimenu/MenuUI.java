@@ -67,6 +67,11 @@ public class MenuUI {
         // humanType = 3 Vigilante
         // humanType = 4 Administrador
         // Vamos hacer una lista en un array como prueba, para posteriormente utilizar una base de datos
+        ArrayList<Propietario> propietarios = new ArrayList<>();
+        propietarios.add(new Propietario("Gianfranco","Chirinos Mendoza","gchi@mail.com"));
+        ArrayList<Vigilante> vigilantes = new ArrayList<>();
+        vigilantes.add(new Vigilante("Paco","Mero Mero","pamm@mail.com"));
+
         ArrayList<Conserje> conserjes  = new ArrayList<>();
         conserjes.add(new Conserje("Jose","Rivadeneyra","jri@mail"));
         conserjes.add(new Conserje("Jaime","Canchari","jca@mail.com"));
@@ -76,7 +81,8 @@ public class MenuUI {
         // registrado, dependiento del tipo de usuario que sea.
         ArrayList<Administrador> administradors = new ArrayList<>();
         administradors.add(new Administrador("Carlos","Urriate","curr@mail.com"));
-        administradors.add(new Administrador("Willy","Leóni","wle@mail.com"));
+        administradors.add(new Administrador("Willy","Leónidas","wle@mail.com"));
+        administradors.add(new Administrador("Lesly","Lucano Angeles", "leslyla02@gmail.com"));
 
         boolean emailCorrect = false;
         do {
@@ -84,14 +90,33 @@ public class MenuUI {
             Scanner sc = new Scanner(System.in);
             String email = sc.nextLine();
 
+            if (humanType == 1){
+                for (Propietario p: propietarios){
+                    if (p.getMail().equals(email)){
+                        emailCorrect = true;
+                        propietarioLogeado = p;
+
+                        //Indicar la conformidad de que se ha logeado
+                    }}
+            }
+
             if (humanType == 2){
-                for (Conserje c:conserjes ){
+                for (Conserje c:conserjes){
                     if (c.getMail().equals(email)){
                         emailCorrect = true;
                         conserjeLogeado = c;
 
                     //Indicar la conformidad de que se ha logeado
                 }}
+            }
+
+            if (humanType == 3){
+                for (Vigilante v:vigilantes){
+                    if (v.getMail().equals(email)){
+                        emailCorrect = true;
+                        vigilanteLogeado = v;
+                        //Indicar la conformidad de que se ha logeado
+                    }}
             }
 
             if (humanType == 4){
