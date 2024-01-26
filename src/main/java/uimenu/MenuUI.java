@@ -105,7 +105,7 @@ public class MenuUI {
                     if (c.getMail().equals(email)){
                         emailCorrect = true;
                         conserjeLogeado = c;
-
+                        UIConserjeMenu.mostrarMenuConserje();
                     //Indicar la conformidad de que se ha logeado
                 }}
             }
