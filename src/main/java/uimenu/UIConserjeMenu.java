@@ -20,7 +20,7 @@ public class UIConserjeMenu {
             if (response == 1){
                 System.out.println("Las tareas indicadas por el administrador: ");
                 for (Administrador administradorsTareasMostrada : UIAdministradorMenu.administradorsTareasMostradas) {
-                    return;
+                    System.out.println(UIAdministradorMenu.administradorsTareasMostradas);
                 }
 
             } else if (response == 2) {
