@@ -73,7 +73,7 @@ public class MenuUI {
         vigilantes.add(new Vigilante("Paco","Mero Mero","pamm@mail.com"));
 
         ArrayList<Conserje> conserjes  = new ArrayList<>();
-        conserjes.add(new Conserje("Jose","Rivadeneyra","jri@mail"));
+        conserjes.add(new Conserje("Jose","Rivadeneyra","jri@mail.com"));
         conserjes.add(new Conserje("Jaime","Canchari","jca@mail.com"));
         conserjes.add(new Conserje("Carlos","Padilla","cpa@mail.com"));
 

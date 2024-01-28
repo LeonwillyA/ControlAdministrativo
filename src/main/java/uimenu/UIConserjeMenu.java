@@ -1,5 +1,7 @@
 package uimenu;
 
+import modelos.Administrador;
+
 import java.util.Scanner;
 
 public class UIConserjeMenu {
@@ -17,6 +19,10 @@ public class UIConserjeMenu {
 
             if (response == 1){
                 System.out.println("Las tareas indicadas por el administrador: ");
+                for (Administrador administradorsTareasMostrada : UIAdministradorMenu.administradorsTareasMostradas) {
+                    return;
+                }
+
             } else if (response == 2) {
                 System.out.println("Indicar las tareas que le daras ok: ");
             } else if (response == 0) {
