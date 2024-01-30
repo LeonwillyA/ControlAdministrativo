@@ -127,7 +127,7 @@ public class MenuUI {
                         UIAdministradorMenu.mostrarMenuAdministrador();
 
                     }}}
-        }while (emailCorrect=true);{}
+        }while (emailCorrect == false);{}
 
     }
 
