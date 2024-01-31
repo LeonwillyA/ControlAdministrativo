@@ -2,7 +2,9 @@ package uimenu;
 
 import modelos.Administrador;
 
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeMap;
 
 public class UIConserjeMenu {
     public static void mostrarMenuConserje(){
@@ -37,6 +39,8 @@ public class UIConserjeMenu {
 
         do {
             System.out.println("Las tareas a realizar se muestra a continuación: ");
+            Map<Integer,Map<Integer,Administrador>> administradors = new TreeMap<>();
+            
         } while (response != 0);
     }
 }
