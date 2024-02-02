@@ -59,7 +59,7 @@ public class UIAdministradorMenu {
             if (response>0 && response<4){
                 int mesSeleccionado = response;
                 System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado-1]);
-                System.out.println("Inserta la fecha: dd/mm/yy");
+                System.out.println("Inserta la fecha: dd/mm/yyyy");
                 String date = sc.nextLine();
 
                 System.out.println("Confirmar si la fecha es la correcta: " + date + "\n1. Fecha correcta \n2. Cambiar la fecha");
