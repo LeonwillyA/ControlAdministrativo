@@ -2,6 +2,7 @@ package uimenu;
 
 import modelos.Administrador;
 
+import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
@@ -40,6 +41,16 @@ public class UIConserjeMenu {
         do {
             System.out.println("Las tareas a realizar se muestra a continuación: ");
             Map<Integer,Map<Integer,Administrador>> administradors = new TreeMap<>();
+            int k=0;
+            for (int i = 0; i < UIAdministradorMenu.administradorsTareasMostradas.size(); i++) {
+                ArrayList<Administrador.TareasConserje> tareasConserjes = UIAdministradorMenu.administradorsTareasMostradas.get(i).getTareasConserjes();
+                Map<Integer,Administrador> administradorTareasAlConserje = new TreeMap<>();
+                for (int j = 0; j < tareasConserjes.size(); j++) {
+                    System.out.println(k + ". " + tareasConserjes.get(j).getDia());
+
+
+                }
+            }
             
         } while (response != 0);
     }

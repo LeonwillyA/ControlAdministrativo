@@ -48,7 +48,7 @@ public class Administrador extends Humano{
 
     @Override
     public String toString() {
-        return super.toString() + "\n Tareas del vigilante: " + designarTareasVigilante + "\n Distribución de tareas del personal de conserjeria: " + tareasConserjes;
+        return super.toString() + "\n"+ "\n Distribución de tareas del personal de conserjeria: " + tareasConserjes;
     }
 
     @Override
@@ -68,6 +68,11 @@ public class Administrador extends Humano{
         public TareasConserje(String hora, String dia, String task){
             this.hora = hora;
             try {
+                /*  la línea de código "this.dia = format.parse(dia);"
+                toma una cadena de texto que representa una fecha ("dia"), la analiza usando el formateo
+                de fecha proporcionado por el objeto "format" y asigna el resultado a la variable miembro
+                "dia" de la instancia actual de la clase. Esto es comúnmente utilizado cuando se trabaja
+                con fechas en Java y se necesita convertir entre representaciones de cadena y objetos Date.*/
                 this.dia = format.parse(dia);
             } catch (ParseException e) {
                 throw new RuntimeException(e);
@@ -91,12 +96,12 @@ public class Administrador extends Humano{
         public void setHora(String hora) {
             this.hora = hora;
         }
-
-        public Date getDia() {
+        //Esta es nuestra bandera que nos indica de que devuelve un objeto del tipo DATE
+        public Date getDia(String DATE) {
             return dia;
         }
 
-        public String getDia(String DATE) {
+        public String getDia() {
             //Me va servir como bandera
 
             return format.format(dia);
