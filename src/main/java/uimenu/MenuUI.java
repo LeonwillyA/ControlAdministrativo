@@ -15,7 +15,7 @@ public class MenuUI {
     public static Vigilante vigilanteLogeado;
     public static  Propietario propietarioLogeado;
 
-
+    //Esto es el menu principal, es la parte de la información principal que se mostrara primero al usuario
     public static void mostrarMenu(){
         System.out.println("Administración de Actividades");
         System.out.println("Seleccione el tipo de usuario al cual perteneces: ");

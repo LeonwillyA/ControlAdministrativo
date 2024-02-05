@@ -47,10 +47,12 @@ public class UIConserjeMenu {
                 Map<Integer,Administrador> administradorTareasAlConserje = new TreeMap<>();
                 for (int j = 0; j < tareasConserjes.size(); j++) {
                     System.out.println(k + ". " + tareasConserjes.get(j).getDia());
-
-
+                    administradorTareasAlConserje.put(Integer.valueOf(j),UIAdministradorMenu.administradorsTareasMostradas.get(i));
+                    administradors.put(Integer.valueOf(k),administradorTareasAlConserje);
                 }
             }
+            Scanner sc = new Scanner(System.in);
+            int responseDiaSeleccionado = Integer.valueOf(sc.nextLine());
             
         } while (response != 0);
     }

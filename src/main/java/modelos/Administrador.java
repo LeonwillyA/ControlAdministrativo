@@ -4,7 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-
+//En esta clase va todas las variables y metodos
 public class Administrador extends Humano{
 
     private String designarTareasVigilante;
