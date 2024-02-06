@@ -4,7 +4,7 @@ public class Vigilante extends Humano{
     private String ocurrencias;
     private String registro_visitas;
     private String registro_paqueteria;
-
+    //Se forma el constructor vgilante donde se tendra los nombres, apellidos y mail.
     public Vigilante (String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }

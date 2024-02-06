@@ -1,5 +1,8 @@
 package modelos;
-
+/**Esta clase es para heredar a los metodos administrador, vigilante, conserje y propietario
+ Lo que se esta queriendo heredar como información primordial es nombres, apellidos y mail, pero
+ se tiene en cuenta de que hay otros valores que tambien se pueden mostrar
+ */
 public abstract class Humano {
     private int id;
     private String nombres;
@@ -7,13 +10,17 @@ public abstract class Humano {
     private String dni;
     private String mail;
     private String phonenumber;
-
+    /** El constructor humano, que va heredar:
+     * @param apellidos : Los apellidos que tendran cualquier cualquier usuario que ingrese a la aplicacion
+     * @param nombres : Los nombres que tendran cualquier cualquier usuario que ingrese a la aplicacion
+     * @param mail : Es el correo con el cual va a verificarse el usuario
+     * */
     public Humano(String nombres, String apellidos, String mail) {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.mail = mail;
     }
-
+    //Se generan los getter y setters
     public int getId() {
         return id;
     }
@@ -61,7 +68,10 @@ public abstract class Humano {
     public void setPhonenumber(String phonenumber) {
         this.phonenumber = phonenumber;
     }
-
+    /**Con este @Override indico la información que se va transmitir por medio del super a las clases Administrador, Conserje, propietario y vigilante
+     * Podemos retornar mayor información, pero esta se retornara solo 3 informaciones que utilizaremos para esta tarea, y lo otro se guardara dentro de su perfil
+     * @return nombres, apellido y mail
+     * */
     @Override
     public String toString() {
         return "Nombre: " + nombres + " //Apellido: " + apellidos
