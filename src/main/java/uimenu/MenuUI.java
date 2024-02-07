@@ -10,6 +10,7 @@ import java.util.Scanner;
 
 public class MenuUI {
     public static final String [] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
+    /** Declarando una variable global del tipo estatica y me va manejar los usuarios que lo van a manejar*/
     public static Administrador administradorLogeado;
     public static Conserje conserjeLogeado;
     public static Vigilante vigilanteLogeado;
@@ -122,7 +123,10 @@ public class MenuUI {
                 for (Propietario p: propietarios){
                     if (p.getMail().equals(email)){
                         emailCorrect = true;
+                        //el p una vez que identifica que es correcto el email del propietario,
+                        // sirve tambien para poder mostrar los datos de quien se logego
                         propietarioLogeado = p;
+                        UIPropietarioMenu.mostrarMenuPropietario();
 
                         //Indicar la conformidad de que se ha logeado
                     }}
@@ -132,6 +136,8 @@ public class MenuUI {
                 for (Conserje c:conserjes){
                     if (c.getMail().equals(email)){
                         emailCorrect = true;
+                        //el p una vez que identifica que es correcto el email del conserje,
+                        // sirve tambien para poder mostrar los datos de quien se logego
                         conserjeLogeado = c;
                         UIConserjeMenu.mostrarMenuConserje();
                     //Indicar la conformidad de que se ha logeado
@@ -142,7 +148,10 @@ public class MenuUI {
                 for (Vigilante v:vigilantes){
                     if (v.getMail().equals(email)){
                         emailCorrect = true;
+                        //el p una vez que identifica que es correcto el email del vigilante,
+                        // sirve tambien para poder mostrar los datos de quien se logego
                         vigilanteLogeado = v;
+
                         //Indicar la conformidad de que se ha logeado
                     }}
             }
@@ -151,6 +160,8 @@ public class MenuUI {
                 for (Administrador a: administradors){
                     if (a.getMail().equals(email)){
                         emailCorrect = true;
+                        //el p una vez que identifica que es correcto el email del administrador
+                        // sirve tambien para poder mostrar los datos de quien se logego
                         administradorLogeado = a;
                         UIAdministradorMenu.mostrarMenuAdministrador();
 
