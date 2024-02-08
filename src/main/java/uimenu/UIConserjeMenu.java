@@ -13,7 +13,11 @@ public class UIConserjeMenu {
         do{
             System.out.println("\n \n ");
             System.out.println(" :: TAREAS PROGRAMADAS :: ");
-            System.out.println(" Un gusto poder atenderte " + MenuUI.conserjeLogeado);
+            //En este punto se puede observar que se utiliza la variable global
+            // administradorLogeado.
+            //Si solo coloco MenuUI.conserjeLogeado me va a establecer el esquema de la información
+            // predeterminada dentro de la clase padre Humano.
+            System.out.println(" Un gusto poder atenderte Sr. " + MenuUI.conserjeLogeado.getApellidos());
             System.out.println("1. Visualizar las tareas");
             System.out.println("2. Dar OK a las tareas realizadas ");
             System.out.println("0. Return");

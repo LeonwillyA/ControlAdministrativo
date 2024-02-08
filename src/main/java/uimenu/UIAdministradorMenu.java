@@ -16,7 +16,11 @@ public class UIAdministradorMenu {
         System.out.println(".--------------------------.");
             System.out.println("\n \n");
             System.out.println("Administrador");
-        System.out.println( "Bienvenido " + MenuUI.administradorLogeado);
+            //En este punto se puede observar que se utiliza la variable global
+            // administradorLogeado.
+            //Si solo coloco MenuUI.administradorLogeado me va a establecer el esquema de la información
+            // predeterminada dentro de la clase padre Humano.
+        System.out.println( "Bienvenido Sr. " + MenuUI.administradorLogeado.getApellidos());
         System.out.println("1. Ordenar el itenirario para el conserje");
         System.out.println("2. Mostrar el itenirario del conserje");
         System.out.println("0. Logout");

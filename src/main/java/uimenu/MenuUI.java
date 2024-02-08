@@ -10,7 +10,10 @@ import java.util.Scanner;
 
 public class MenuUI {
     public static final String [] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
-    /** Declarando una variable global del tipo estatica y me va manejar los usuarios que lo van a manejar*/
+    /** Declarando una variable global del tipo estatica y van a manejar los usuarios
+     * ya que con esto se hace la verificación del mail, se brinda los datos y con estas variables es que
+     * realizo la invocación de los datos de dicha personal*/
+
     public static Administrador administradorLogeado;
     public static Conserje conserjeLogeado;
     public static Vigilante vigilanteLogeado;
@@ -72,7 +75,7 @@ public class MenuUI {
         // humanType = 3 Vigilante
         // humanType = 4 Administrador
         // Vamos hacer una lista en un array como prueba, para posteriormente utilizar una base de datos
-        /* Es como si fuera a mi capa de persistencia de datos y me trajera todos los usuarios que tengo
+        /* Los ArrayList <> Es como si fuera a mi capa de persistencia de datos y me trajera todos los usuarios que tengo
         registrado, dependiento del tipo de usuario que sea.*/
         /*ArrayList <Propietario= Es la clase Propietario> propietarios viene a ser como la variable
         * para poder invocarlo*/
@@ -136,7 +139,7 @@ public class MenuUI {
                 for (Conserje c:conserjes){
                     if (c.getMail().equals(email)){
                         emailCorrect = true;
-                        //el p una vez que identifica que es correcto el email del conserje,
+                        //el c una vez que identifica que es correcto el email del conserje,
                         // sirve tambien para poder mostrar los datos de quien se logego
                         conserjeLogeado = c;
                         UIConserjeMenu.mostrarMenuConserje();
@@ -148,7 +151,7 @@ public class MenuUI {
                 for (Vigilante v:vigilantes){
                     if (v.getMail().equals(email)){
                         emailCorrect = true;
-                        //el p una vez que identifica que es correcto el email del vigilante,
+                        //el v una vez que identifica que es correcto el email del vigilante,
                         // sirve tambien para poder mostrar los datos de quien se logego
                         vigilanteLogeado = v;
 
@@ -160,7 +163,7 @@ public class MenuUI {
                 for (Administrador a: administradors){
                     if (a.getMail().equals(email)){
                         emailCorrect = true;
-                        //el p una vez que identifica que es correcto el email del administrador
+                        //el a una vez que identifica que es correcto el email del administrador
                         // sirve tambien para poder mostrar los datos de quien se logego
                         administradorLogeado = a;
                         UIAdministradorMenu.mostrarMenuAdministrador();
