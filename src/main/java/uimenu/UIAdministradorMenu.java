@@ -32,7 +32,7 @@ public class UIAdministradorMenu {
 
             switch (response){
                 case 1:
-                    mostrarTareasConserje();
+                    itinerarioTareasConserje();
                     break;
                 case 2:
                     break;
@@ -45,29 +45,39 @@ public class UIAdministradorMenu {
         }while (response != 0);
 
     }
-    private static void mostrarTareasConserje(){
+    /** Con este metodo vamos a establecer las tareas que realizara el conserje durante un día establecido o un mes
+     * dependiendo del caso de la programación  , estas
+     * tareas seran indicadas por el Administrador. */
+    private static void itinerarioTareasConserje(){
         int response = 0;
         do {
             System.out.println(" :: Agregar la tarea");
             System.out.println("Selecciona el mes");
-
-            for (int i = 0; i < 3; i++) {
+            //Para poder elegir el mes en el cual va trabajar se va necesitar realizar un for de los meses
+            // que se va seleccionar, estos meses se encuentran dentro de MenuUI (tener en cuenta que esto
+            // solo muestra).
+            for (int i = 1; i < 4; i++) {
                 int j = i + 1;
                 System.out.println(j+". "+MenuUI.MONTHS[i]);
             }
             System.out.println("0. Return");
-
+            /* El Scanner se utiliza para leer la entrada del usuario desde la consola (System.in).
+             * Integer.valueOf(sc.nextLine()) toma la cadena de caracteres leída por sc.nextLine() y
+             * la convierte a un objeto de la clase Integer.*/
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
 
-            if (response>0 && response<4){
+            if (response>0 && response<5){
+                //mesSeleccionado: Es la variable que esta relacionado al j lineas arriba, donde indica la posición del mes
                 int mesSeleccionado = response;
                 System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado-1]);
                 System.out.println("Inserta la fecha: dd/mm/yyyy");
+                //La fecha lo guarda como un String.
                 String date = sc.nextLine();
 
                 System.out.println("Confirmar si la fecha es la correcta: " + date + "\n1. Fecha correcta \n2. Cambiar la fecha");
                 int responseDate = Integer.valueOf(sc.nextLine());
+                //Una vez que coloco 2, la palabra reservada continue, me regresa al punto en que tengo que volver a colocar la fecha
                 if( responseDate == 2) continue;
 
                 int responseTime = 0;

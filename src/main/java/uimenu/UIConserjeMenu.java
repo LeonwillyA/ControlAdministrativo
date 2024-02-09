@@ -1,7 +1,5 @@
 package uimenu;
-
 import modelos.Administrador;
-
 import java.util.ArrayList;
 import java.util.Map;
 import java.util.Scanner;

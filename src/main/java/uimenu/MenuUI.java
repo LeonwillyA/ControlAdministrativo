@@ -9,6 +9,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuUI {
+    /** La variable static MONTH tiene que ser final debido a que los meses son constantes y no van a variar nunca en
+     * el tiempo*/
     public static final String [] MONTHS = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"};
     /** Declarando una variable global del tipo estatica y van a manejar los usuarios
      * ya que con esto se hace la verificación del mail, se brinda los datos y con estas variables es que
@@ -110,7 +112,8 @@ public class MenuUI {
             System.out.println("Inserta tu correo electronico: ");
             /* El Scanner se utiliza para leer la entrada del usuario desde la consola (System.in).
             *Se utiliza el método nextLine() del objeto Scanner para leer una línea completa de la entrada
-            * del usuario desde la consola. La línea ingresada por el usuario se almacena en la variable email
+            * del usuario desde la consola. La línea ingresada por el usuario se almacena en la variable email.
+            * sc.nextLine(): La línea leída se almacena como una cadena de caracteres (String)
             * */
             Scanner sc = new Scanner(System.in);
             String email = sc.nextLine();
