@@ -50,7 +50,11 @@ public abstract class Humano {
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+        if(dni.length() == 8){
+            this.dni = dni;
+        } else {
+            System.out.println("Numero incorrecto, favor de colocar uno bueno");
+        }
     }
 
     public String getMail() {
@@ -62,11 +66,15 @@ public abstract class Humano {
     }
 
     public String getPhonenumber() {
-        return phonenumber;
+        return null;
     }
 
     public void setPhonenumber(String phonenumber) {
-        this.phonenumber = phonenumber;
+        if(phonenumber.length() == 9){
+            this.phonenumber = phonenumber;
+        } else {
+            System.out.println("Colocar un correcto número de celular");
+        }
     }
     /**Con este @Override indico la información que se va transmitir por medio del super a las clases Administrador, Conserje, propietario y vigilante
      * Podemos retornar mayor información, pero esta se retornara solo 3 informaciones que utilizaremos para esta tarea, y lo otro se guardara dentro de su perfil
@@ -75,7 +83,7 @@ public abstract class Humano {
     @Override
     public String toString() {
         return "Nombre: " + nombres + " //Apellido: " + apellidos
-                + "\n //Correo: " + mail;
+                + "\n //Correo: " + mail + "\n //Numero de Celular: " + phonenumber;
     }
 
     public abstract void informacionUsuarios();

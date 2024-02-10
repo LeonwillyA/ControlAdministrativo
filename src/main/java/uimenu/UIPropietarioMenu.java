@@ -11,7 +11,7 @@ public class UIPropietarioMenu {
             System.out.println(".--------------------------.");
             System.out.println("\n \n");
             System.out.println("Propietario");
-            System.out.println( "Bienvenido " + MenuUI.propietarioLogeado);
+            System.out.println( "Bienvenido Sr. " + MenuUI.propietarioLogeado.getApellidos());
             System.out.println("1.- Desea ver su recibo proximo a vencer");
             System.out.println("2.- Desea ver los equipos que necesitan mantenimientos correctivos");
             System.out.println("3.- Desea ver las fechas de los mantenimientos de equipos ");

@@ -29,10 +29,7 @@ public class Administrador extends Humano{
     }
 
     public Administrador(String nombres, String apellidos, String mail){
-
         super(nombres,apellidos, mail);
-
-
     }
 
     ArrayList<TareasConserje> tareasConserjes = new ArrayList<>();

@@ -71,11 +71,12 @@ public class UIAdministradorMenu {
                 //mesSeleccionado: Es la variable que esta relacionado al j lineas arriba, donde indica la posición del mes
                 int mesSeleccionado = response;
                 System.out.println(mesSeleccionado + " . " + MenuUI.MONTHS[mesSeleccionado-1]);
-                System.out.println("Inserta la fecha: dd/mm/yyyy");
+                System.out.println("Inserta la fecha: [dd/mm/yyyy]");
                 //La fecha lo guarda como un String.
                 String date = sc.nextLine();
 
                 System.out.println("Confirmar si la fecha es la correcta: " + date + "\n1. Fecha correcta \n2. Cambiar la fecha");
+                //Luego de elegir la opción entre 1 o 2, la respuesta se guarda en responseDate y se procede a ejecutar una de esas opciones elegidas.
                 int responseDate = Integer.valueOf(sc.nextLine());
                 //Una vez que coloco 2, la palabra reservada continue, me regresa al punto en que tengo que volver a colocar la fecha
                 if( responseDate == 2) continue;
@@ -86,6 +87,7 @@ public class UIAdministradorMenu {
                     System.out.println("Insertar la hora de inicio de la actividad del día " + date + "[00:00]");
                     time = sc.nextLine();
                     System.out.println("Confirmar si la hora es la correcta: " + time + "\n1. Hora correcta \n2. Cambiar la hora");
+                    //Luego de elegir la opción entre 1 o 2, la respuesta se guarda en responseTime y se procede a ejecutar una de esas opciones elegidas.
                     responseTime = Integer.valueOf(sc.nextLine());
                 }while (responseTime == 2);
 
