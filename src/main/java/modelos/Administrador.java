@@ -31,14 +31,19 @@ public class Administrador extends Humano{
     public Administrador(String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }
-
+    /** Se agregara la colección de objetos (ArrayList donde se se estara almacenando cada tarea que se agregue)
+     * TareasConserje: Es la clase anidada.
+     * tareasConserjes: Nombre de la coleccion.*/
     ArrayList<TareasConserje> tareasConserjes = new ArrayList<>();
-
+        /** Creación de un metodo, donde se agregara infinicatas  tareas de la clase anidada tareasConserje instanciandola
+         * */
        public void addTareasConserje (String hora, String dia, String task){
-
+           //Cada vez que añada una nueva tarea, puedo estar declarando un nuevo objeto con las
+           // caracteristicas hora, dia y task
             tareasConserjes.add(new Administrador.TareasConserje(hora, dia, task));
        }
-
+       /**Devolver la lista completa de los conserjes, donde devolvera el Array
+        * que hemos generado*/
        public ArrayList<TareasConserje> getTareasConserjes(){
            return tareasConserjes;
        }
@@ -55,6 +60,13 @@ public class Administrador extends Humano{
         System.out.println("Designan funciones");
     }
 
+
+    /**La creación de una clase estatica (CLASE ANIDADA), se da con la finalidad de evitar la creación de un Array que tuviera la colección
+     * de los elementos que se encuentran dentro de la clase, a partir de ese punto es donde no se vuelve escalable.
+     * hora: hora que indica el administrador para el inicio de sus actividades.
+     * dia: día que realizara dicha función
+     * task: La tarea que va a realizar.
+     * */
     public static class TareasConserje {
         private int id;
         private String hora;
