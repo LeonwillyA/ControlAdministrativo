@@ -1,5 +1,6 @@
 package modelos;
-
+/**La clase Vigilante esta catalogada como 'SUB CLASE'.
+ En esta clase va todas las variables, metodos y clases anidadas*/
 public class Vigilante extends Humano{
     private String ocurrencias;
     private String registro_visitas;

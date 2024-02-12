@@ -1,5 +1,6 @@
 package modelos;
-
+/**La clase Conserje esta catalogada como 'SUB CLASE'.
+ En esta clase va todas las variables, metodos y clases anidadas*/
 public class Conserje extends Humano{
     private String tareas_limpieza;
     private String tareas_jardineria;

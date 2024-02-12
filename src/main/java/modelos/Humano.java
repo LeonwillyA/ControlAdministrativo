@@ -1,5 +1,5 @@
 package modelos;
-/**Esta clase abstracta se genera como Herencia a los clases administrador, vigilante, conserje y propietario
+/**La clase humano esta catalogada como 'SUPER CLASE', Esta clase abstracta se genera como Herencia a los clases administrador, vigilante, conserje y propietario
  Lo que se esta queriendo heredar como información primordial es nombres, apellidos y mail, pero
  se tiene en cuenta de que hay otros valores que tambien se pueden mostrar
  */

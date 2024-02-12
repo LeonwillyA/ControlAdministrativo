@@ -1,5 +1,6 @@
 package modelos;
-
+/**La clase Propietario esta catalogada como 'SUB CLASE'.
+ En esta clase va todas las variables, metodos y clases anidadas*/
 public class Propietario extends Humano{
     //Private pare encapsulamiento
     private double cuota_recibo;

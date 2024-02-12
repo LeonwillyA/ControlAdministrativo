@@ -4,7 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
-//En esta clase va todas las variables y metodos
+/**La clase Administrador esta catalogada como 'SUB CLASE'.
+En esta clase va todas las variables, metodos y clases anidadas*/
 public class Administrador extends Humano{
 
     private String designarTareasVigilante;
