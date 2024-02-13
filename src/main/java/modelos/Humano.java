@@ -19,6 +19,7 @@ public abstract class Humano {
         this.nombres = nombres;
         this.apellidos = apellidos;
         this.mail = mail;
+
     }
     //Se generan los getter y setters
     public int getId() {
@@ -76,7 +77,11 @@ public abstract class Humano {
             System.out.println("Colocar un correcto número de celular");
         }
     }
-    /**Con este @Override indico la información que se va transmitir por medio del super a las clases Administrador, Conserje, propietario y vigilante
+    /**Con este método toString ´@Override´, no es propio de la clase Humano sino que es un método que esta siendo extraido
+     * de la suṕer clase, por eso tenemos super.toString, que significa que esta invocando al método toString de la
+     * clase padre Object (Obtiene el nombre de la clase con las instrucciones getclass().getName() y luego obtener el hashCode
+     * de la clase en si, que es como un identificador
+     * Indico la información que se va transmitir por medio del super a las clases Administrador, Conserje, propietario y vigilante
      * Podemos retornar mayor información, pero esta se retornara solo 3 informaciones que utilizaremos para esta tarea, y lo otro se guardara dentro de su perfil
      * @return nombres, apellido y mail
      * */
