@@ -48,10 +48,14 @@ public class Administrador extends Humano{
        public ArrayList<TareasConserje> getTareasConserjes(){
            return tareasConserjes;
        }
-
+    /**Al momento de invocar al método toString en la clase administrador, voy a visualizar en la consola  al metodo toString
+     * que se realizo en la clase padre Humano (Comportamiento de la clase padre)y adicional a ello voy a llamar a un objeto (gastosTotales)
+     * que es propio de esta clase. El array de tareasConserjes que se construye, lo voy a transformar a un toString para que
+     * me muestre solo los datos de una cita
+     * El metodo toString se llama de manera implicita al momento de querer imprimirlo*/
     @Override
     public String toString() {
-        return super.toString() + "\n"+ "\n Distribución de tareas del personal de conserjeria: " + tareasConserjes;
+        return super.toString() + "\n"+ "\n Gasto total: " + gastosTotales + "Tareas del conserje: " + tareasConserjes.toString();
     }
 
     @Override
@@ -128,9 +132,10 @@ public class Administrador extends Humano{
         public void setTask(String task) {
             this.task = task;
         }
+        /**Este método toString solo se aplicara cuando se ejecute la clase anidada TareasConserje*/
         @Override
         public String toString() {
-            return  "\n hora: " + hora + "\n dia: " + dia + "\n Función a realizar: " + task;
+            return  "\n Tareas designadas al Conserje: " + "\n hora: " + hora + "\n dia: " + dia + "\n Función a realizar: " + task;
         }
     }
 
