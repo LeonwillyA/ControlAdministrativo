@@ -9,10 +9,14 @@ public class Vigilante extends Humano{
     public Vigilante (String nombres, String apellidos, String mail){
         super(nombres,apellidos, mail);
     }
-
+    /**El método informacionUsuarios se hereda de manera obligatoria por parte de la clase Padre Humano
+     * ya que este método viene siendo abstracto.
+     * Tener en cuenta que por más que la clase padre sea igual para todos, en el método instaurado
+     * dentro de el, se puede utilizar para distintos comportamientos en cada uno de ellos*/
     @Override
     public void informacionUsuarios() {
-        System.out.println("Ejecuta las funciones de vigilancia");
+        System.out.println("Empresa Administradora: IKIGAI");
+        System.out.println("Ejecuta funciones de vigilancia");
     }
 
     public String getOcurrencias() {

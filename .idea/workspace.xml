@@ -7,6 +7,11 @@
     <list default="true" id="d0cfd967-df03-4aad-8527-050ff8eaa3a2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Administrador.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Administrador.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Conserje.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Conserje.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Humano.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Humano.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/ICronograma.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/ICronograma.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Propietario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Propietario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/modelos/Vigilante.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/modelos/Vigilante.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

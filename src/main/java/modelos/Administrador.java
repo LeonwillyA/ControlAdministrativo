@@ -57,10 +57,13 @@ public class Administrador extends Humano{
     public String toString() {
         return super.toString() + "\n"+ "\n Gasto total: " + gastosTotales + "Tareas del conserje: " + tareasConserjes.toString();
     }
-
+    /**El método informacionUsuarios se hereda de manera obligatoria por parte de la clase Padre Humano
+     * ya que este método viene siendo abstracto.
+     * Tener en cuenta que por más que la clase padre sea igual para todos, en el método instaurado
+     * dentro de el, se puede utilizar para distintos comportamientos en cada uno de ellos*/
     @Override
     public void informacionUsuarios() {
-        System.out.println("Administrador");
+        System.out.println("Empresa Administradora: IKIGAI");
         System.out.println("Genera recibos");
         System.out.println("Designan funciones");
     }

@@ -90,7 +90,9 @@ public abstract class Humano {
         return "Nombre: " + nombres + " //Apellido: " + apellidos
                 + "\n //Correo: " + mail + "\n //Numero de Celular: " + phonenumber;
     }
-
+    /**Creación de un método, este metodo al ser abstracto, va heredar de manera obligatoria
+     * a las subclases de la clase Padre, en este punto solo debemos dejar su signature definido
+     * y este método ya no debe llevar llaves*/
     public abstract void informacionUsuarios();
 
 }

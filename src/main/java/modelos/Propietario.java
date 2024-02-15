@@ -41,7 +41,10 @@ public class Propietario extends Humano{
         return super.toString() + "\n Recibo de la administración: " + cuota_recibo
                 + "\n Numero de departamento: " + numero_departamento;
     }
-
+    /**El método informacionUsuarios se hereda de manera obligatoria por parte de la clase Padre Humano
+     * ya que este método viene siendo abstracto.
+     * Tener en cuenta que por más que la clase padre sea igual para todos, en el método instaurado
+     * dentro de el, se puede utilizar para distintos comportamientos en cada uno de ellos*/
     @Override
     public void informacionUsuarios() {
         System.out.println("Residente del Condominio Terrezas del Sol");
