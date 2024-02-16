@@ -42,10 +42,29 @@ public class UIConserjeMenu {
 
         do {
             System.out.println("Las tareas a realizar se muestra a continuación: ");
+            /*Vamos a empezar con el Map, mostrando las fechas de los administradores que ya dejaron las ordenes a los
+            conserjes, el primer Key va ser un entero, recordar que es una coleccion de objetos y que Int no va
+            funcionar y qe tenemos que colocar Integer, y que este primer Integer va llevar la numeracion de la
+            lista de fechas, en este punto se va almacenar en modo de indice la numeración de la lista de fechas, y para
+            eso es lo que vamos a utilizar otro Map, y que tambien va llevar un Key, y el value que va tener es un Administrador.
+            Con respecto al Administrador, cada uno de ellos van a tener un arr
+            1.- Administrador 1
+                    1.- echa 1
+                    2.- Fecha 2
+            2.- Administrador 2
+            3.- Administrador3
+            */
             Map<Integer,Map<Integer,Administrador>> administradors = new TreeMap<>();
             int k=0;
+            /*Vamos a recorrer el array administradorsTareasMostradas para poder extraer las fechas de las tareas*/
             for (int i = 0; i < UIAdministradorMenu.administradorsTareasMostradas.size(); i++) {
+                /*Un array donde vamos a estar caṕturando los ok de las tareas realizadas. Vamos a recorrer al administrador
+                * que tiene las tareas colocadas, y luego le solicio las tareas por realizar y se asigno en este objeto
+                * /coleccion getTareasConserjes
+                *  */
                 ArrayList<Administrador.TareasConserje> tareasConserjes = UIAdministradorMenu.administradorsTareasMostradas.get(i).getTareasConserjes();
+                /*Ahora voy a pasar a  Map<Integer,Administrador>, y lo coloco como treeMap(Como nuestra relación es compleja
+                vamos a utilizar la estructura tipo arbol)*/
                 Map<Integer,Administrador> administradorTareasAlConserje = new TreeMap<>();
                 for (int j = 0; j < tareasConserjes.size(); j++) {
                     System.out.println(k + ". " + tareasConserjes.get(j).getDia());

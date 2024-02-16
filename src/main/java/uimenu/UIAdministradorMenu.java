@@ -7,7 +7,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UIAdministradorMenu {
-
+    /**Seleccionar a los administradores que ya designaron las tareas y lo estamos almacenando en un Array, para
+     * lo cual se va declarar una variable estatica , se necesita que los ciclos de vida de estos datos esten
+     * perdurando. Este array es de solo los Administradores que han delegado funciones.*/
     public static ArrayList<Administrador> administradorsTareasMostradas = new ArrayList<>();
 
     public static void mostrarMenuAdministrador(){
@@ -35,6 +37,7 @@ public class UIAdministradorMenu {
                     itinerarioTareasConserje();
                     break;
                 case 2:
+
                     break;
                 case 0:
                    MenuUI.mostrarMenu();
@@ -102,7 +105,8 @@ public class UIAdministradorMenu {
 
 
                 MenuUI.administradorLogeado.addTareasConserje(time,date,task);
-                revisarAdminitradorTareasConserjes(MenuUI.administradorLogeado);
+                //Esto sirve para poder agregar al doctor, cuando este no este no este agregado previamente
+                revisarAdministradorTareasConserjes(MenuUI.administradorLogeado);
 
             } else if (response == 0) {
                 mostrarMenuAdministrador();
@@ -111,9 +115,11 @@ public class UIAdministradorMenu {
 
         }while (response != 0);
     }
-
-    private static void revisarAdminitradorTareasConserjes(Administrador administrador){
-        if (administrador.getTareasConserjes().size()>0
+    /**el método 'revisar AdministradorTareasConserjes va a recibir un objeto del tipo Administrador. Esto se traduce
+     * a que si el administrador que tengo registrado que si tiene tareas por designar, y además el administrador, NO existe
+     * previamente. Solo en esos 2 casos yo voy a estar añadiendo al administrador que me estan pasando*/
+    private static void revisarAdministradorTareasConserjes(Administrador administrador){
+        if (administrador.getTareasConserjes().size() > 0
         && !administradorsTareasMostradas.contains(administrador)){
         administradorsTareasMostradas.add(administrador);
         }
