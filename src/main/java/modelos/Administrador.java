@@ -116,12 +116,12 @@ public class Administrador extends Humano{
             this.hora = hora;
         }
         //Esta es nuestra bandera que nos indica de que devuelve un objeto del tipo DATE
-        public Date getDia() {
+        public Date getDia(/*Nos asegura que nos devuelve un objeto del tipo Date*/String DATE) {
             return dia;
         }
         /*Para identificar que este getDia que me esta devolviendo un String, voy a utilizar el format,junto con el
         * format que tenemos para pasar el objeto dia*/
-        public String getDia(String Date) {
+        public String getDia() {
             return format.format(dia);
         }
 
