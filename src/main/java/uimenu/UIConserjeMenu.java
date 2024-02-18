@@ -110,6 +110,8 @@ public class UIConserjeMenu {
                     administradorSeleccionado.getTareasConserjes().get(indexDate).getHora() + "Tarea: " + administradorSeleccionado.getTareasConserjes().get(indexDate).getTask());
             System.out.println("Confirmar si la tarea realizada es la correcta: \n1. Si \n2. No");
             response = Integer.valueOf(sc.nextLine());
+            if (response == 1){}
+
         } while (response != 0);
     }
 }
