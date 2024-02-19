@@ -18,9 +18,15 @@ public class Conserje extends Humano{
     public ArrayList<TareasConserje> getTareasConserjes() {
         return tareasConserjes;
     }
-
+    /*Este set va recibir como primer parametro, administrador, dia, time y task*/
     public void addTareasConserjes(Administrador administrador, Date dia, String time, String task) {
-        TareasConserje tareasConserje = new TareasConserje(this, administrador)
+        /*Crearemos una instancia de tareasConserje, y va recibir a this como parametro de paciente y del
+        * administrador. En este punto estamos indicando la tarea echa de este Administrador */
+        TareasConserje tareasConserje = new TareasConserje(this, administrador);
+        /*Cuando ya tenemos los datos lo pasamos aquí*/
+        tareasConserje.Cronograma(dia,time,task);
+        /*A nuestra lista de tareasConserje, le damos add y le pasamos el objeto que acabamos de contruir*/
+        tareasConserjes.add(tareasConserje);
     }
 
     public Conserje (String nombres, String apellidos, String mail){

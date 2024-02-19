@@ -20,6 +20,7 @@ public class UIConserjeMenu {
             System.out.println(" Un gusto poder atenderte Sr. " + MenuUI.conserjeLogeado.getApellidos());
             System.out.println("1. Visualizar las tareas");
             System.out.println("2. Dar OK a las tareas realizadas ");
+            System.out.println("3. Ver los que estan OKA");
             System.out.println("0. Return");
             Scanner sc = new Scanner(System.in);
             response = Integer.valueOf(sc.nextLine());
@@ -27,11 +28,16 @@ public class UIConserjeMenu {
             if (response == 1){
                 System.out.println("Las tareas indicadas por el administrador: ");
                 for (Administrador administradorsTareasMostrada : UIAdministradorMenu.administradorsTareasMostradas) {
-                    System.out.println(UIAdministradorMenu.administradorsTareasMostradas);
+                    System.out.println( "\n " + UIAdministradorMenu.administradorsTareasMostradas);
                 }
 
             } else if (response == 2) {
                 System.out.println("Indicar las tareas que le daras ok: ");
+                mostrarTareasOrdenadasAdministrador();
+            } else if (response == 3) {
+                System.out.println("Aquí esta tu avance:");
+                mostrasTareasOK();
+
             } else if (response == 0) {
                 MenuUI.mostrarMenu();
             }
@@ -104,14 +110,43 @@ public class UIConserjeMenu {
                 administradorSeleccionado = ad.getValue();
             }
             /*Cofirmar lo que seleccionamos*/
-            System.out.println(administradorSeleccionado.getApellidos() + "Fecha: " + administradorSeleccionado.getTareasConserjes().get(indexDate).getDia() +" Hora: " +
-                    /*Voy a administrador que me designo la tarea, luego a las tareas de conserjes que realizo, despues de
-                    * ello al arbol con indexDate y al final encontra la hora que necesito que se vea*/
-                    administradorSeleccionado.getTareasConserjes().get(indexDate).getHora() + "Tarea: " + administradorSeleccionado.getTareasConserjes().get(indexDate).getTask());
+            System.out.println(administradorSeleccionado.getApellidos() + "Fecha: " +
+                    administradorSeleccionado.getTareasConserjes().get(indexDate).getDia() +" Hora: " +
+                    /*Voy a administrador que me designo la tarea, luego a las tareas de conserjes que realizo, despues
+                    * de ello al arbol con indexDate y al final encontra la hora que necesito que se vea*/
+                    administradorSeleccionado.getTareasConserjes().get(indexDate).getHora() + "Tarea: " +
+                    administradorSeleccionado.getTareasConserjes().get(indexDate).getTask());
             System.out.println("Confirmar si la tarea realizada es la correcta: \n1. Si \n2. No");
             response = Integer.valueOf(sc.nextLine());
-            if (response == 1){}
+            if (response == 1){
+                MenuUI.conserjeLogeado.addTareasConserjes(administradorSeleccionado,
+                        /*getDia(null) lo vamos a pasar como nulo, xq este es el que devuelve un objeto del tipo Date
+                        * ya que es el que se necesita para poder hacer el Cronograma*/
+                        administradorSeleccionado.getTareasConserjes().get(indexDate).getDia(null),
+                        administradorSeleccionado.getTareasConserjes().get(indexDate).getHora(),
+                        administradorSeleccionado.getTareasConserjes().get(indexDate).getTask());
+                mostrarMenuConserje();
+            }
 
         } while (response != 0);
+    }
+    private static void mostrasTareasOK(){
+        int response = 0;
+        do {
+            System.out.println("::Mis tareas OKA::");
+            if (MenuUI.conserjeLogeado.getTareasConserjes().size() == 0){
+                System.out.println("Hasta el momento no hiciste ninguna tarea");
+            }
+
+            for (int i = 0; i <MenuUI.conserjeLogeado.getTareasConserjes().size(); i++) {
+                int j = i +1;
+                System.out.println(j + ". " +
+                        "Día: " + MenuUI.conserjeLogeado.getTareasConserjes().get(i).getDate() +
+                        " Time: " + MenuUI.conserjeLogeado.getTareasConserjes().get(i).getTime() +
+                        " Task: " + MenuUI.conserjeLogeado.getTareasConserjes().get(i).getTask() +
+                        " \n Administrador: " + MenuUI.conserjeLogeado.getTareasConserjes().get(i).getAdministrador().getApellidos());
+            }
+            System.out.println("0. Return");
+        }while (response !=0);
     }
 }
